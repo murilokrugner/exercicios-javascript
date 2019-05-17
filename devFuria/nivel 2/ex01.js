@@ -13,3 +13,13 @@ Portanto sua função deve...
 retornar 1 ou mais caso negativo (é ímpar) e
 retornar 0 caso positivo (é par)*/
 
+function parImpar(num){
+    if(num % 2 === 0){
+        return console.log("Numero par")
+    }else{
+        return console.log("Numero Impar")
+    }
+}
+
+parImpar(11)
+
