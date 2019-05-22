@@ -1,0 +1,58 @@
+<!--Manipulando o DOM -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       <title>Manipulando o DOM com JavaScript</title>
+   </head>
+   <body>
+        <div class="container">
+            <form id="form">
+                <input type="text" id="nome" placeholder="Seu nome"><br>
+                <br>
+                <input type="text" id="sobrenome" placeholder="Seu sobrenome"><br>
+                <br>
+                <input type="text" id="sexo" placeholder="Seu sexo"><br>
+                <br>
+                <input type="text" id="campo1" placeholder="Valor 1"><br>
+                <br>
+                <input type="text" id="campo2" placeholder="Valor 2"><br>
+                <br>
+                <button type="submit" onclick="botao()">Somar</button><br>
+                <br>
+                <button type="submit" onclick="dados()">Testar</button><br>
+                <br>
+             </form>
+        </div>
+
+
+       <script type="text/javascript">
+        function botao(){
+            var campo1 = document.getElementById('campo1')
+            var campo2 = document.getElementById('campo2')
+            var soma = parseInt(campo1.value) + parseInt(campo2.value)
+            return alert('Resultado: ' + soma)
+        }
+
+        function dados(){
+            var nome = document.getElementById('nome')
+            var sobrenome = document.getElementById('sobrenome')
+            var sexo = document.getElementById('sexo')
+            
+            if(nome.value === 'Murilo' || nome.value === 'murilo'){
+                if(sexo.value === 'M' || sexo.value === 'm'){
+                    return alert('Esse nome é lindo')    
+                }else{
+                    return alert(nome.value + ',' + ' tem algo estranho ai')
+                }
+            } else{
+                return alert('Que nome ridiculo')
+            }
+
+               
+        }
+        
+        </script>
+   </body>
+</html>
